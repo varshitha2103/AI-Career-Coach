@@ -1,106 +1,111 @@
 # 🧠 AI Career Coach
 
-**AI Career Coach** is a simple Streamlit web app that helps users enhance resumes, generate cover letters, and prepare for interviews using locally running AI models like `LLaMA 2`, `Mistral`, or `Phi` via [Ollama](https://ollama.com/). No internet APIs or billing needed — everything runs on your own machine.
+**AI Career Coach** is a Streamlit-powered web app that uses Meta’s **LLaMA 2** via [Ollama](https://ollama.com) to help job seekers enhance resumes, generate personalized cover letters, and practice interview questions. Everything runs **locally** — no API key or internet access required.
 
 ---
 
 ## 🚀 Features
 
-- 📄 **Resume Enhancer** – Rewrites and improves resumes for any target job role
-- ✉️ **Cover Letter Generator** – Creates personalized cover letters from resume + job description
-- 🎤 **Interview Coach** – Generates common Q&A for technical and behavioral interviews
-- 📎 **Supports File Uploads** – Accepts `.pdf` and `.docx` resumes
-- 🧠 Powered by local LLMs: `phi`, `llama2`, `mistral`, etc. via Ollama
+- 📄 Resume Enhancer – AI-polished resumes for any target job role
+- ✉️ Cover Letter Generator – Personalized letters based on resume + job description
+- 🎤 Interview Coach – Generates Q&A tailored to the job role
+- 📎 Supports PDF and DOCX resume uploads
+- 🤖 Uses local LLaMA 2 model via Ollama
 
 ---
 
-## 🛠️ Requirements
+## 🛠 Requirements
 
 - Python 3.8+
-- Ollama (for running local LLMs)
+- [Ollama](https://ollama.com/download)
 - Streamlit
-- Basic system RAM: 4–8 GB (varies by model)
+- 8 GB RAM (recommended for LLaMA 2)
 
 ---
 
 ## 🔧 Installation
 
-1. **Clone this repository** or download the code:
+1. **Clone the repository**
 
-```bash
 git clone https://github.com/yourusername/ai-career-coach.git
 cd ai-career-coach
-Create and activate a virtual environment:
 
-bash
-Copy
-Edit
+
+2. **Create a virtual environment**
+
 python -m venv venv
-# Windows
+
+Windows
+
 venv\Scripts\activate
-# macOS/Linux
+
+macOS/Linux
+
 source venv/bin/activate
-Install dependencies:
 
-bash
-Copy
-Edit
+3. **Install dependencies**
+
 pip install -r requirements.txt
-Install and run Ollama:
 
-Download: https://ollama.com/download
+4. **Install and start LLaMA 2 using Ollama**
 
-Then run your chosen model (example: llama2 or phi)
-
-bash
-Copy
-Edit
 ollama run llama2
-▶️ Running the App
-bash
-Copy
-Edit
+
+---
+
+## ▶️ Run the App
+
 streamlit run app.py
-The app will open in your browser at http://localhost:8501
 
-🤖 Supported Models
-You can change the model used by editing app.py:
 
-python
-Copy
-Edit
-call_gpt(prompt, model="llama2")
-Recommended:
+Then open [http://localhost:8501](http://localhost:8501) in your browser.
 
-phi – lightweight, very fast (~1.8GB RAM)
+---
 
-mistral – better quality, needs ~6–8GB RAM
+## 🧠 Change Model (Optional)
 
-llama2 – more fluent and accurate (~8–10GB RAM)
+You can use other Ollama models by editing this line in `app.py`:
 
-⚠️ Choose a model that fits your available system memory.
+```python
+response = ollama.chat(model="llama2", ...)
+
+Try:
+
+phi (very lightweight)
+
+mistral (high quality, needs more RAM)
+
+llama2:7b-chat-q4_0 (quantized, lower memory)
 
 📁 Project Structure
-arduino
-Copy
-Edit
+
 ai-career-coach/
-├── app.py                # Main Streamlit app
-├── requirements.txt      # Python dependencies
+├── app.py
+├── requirements.txt
+├── README.md
 ├── .streamlit/
-│   └── config.toml       # (optional) Streamlit UI config
-🧠 Sample Use Case
-Upload your resume as PDF or DOCX
+│   └── config.toml (optional)
 
-Enter your target job role (e.g., "Data Analyst")
-
-Click "Enhance Resume" to generate AI-enhanced content
-
-Use other modules to generate cover letters or interview Q&A
-
-📜 License
-MIT License — free to use, share, or modify.
 
 🙋‍♀️ Author
-Developed by Varshitha Yanamala
-Powered by Ollama + Streamlit
+Built by Varshitha Yanamala
+
+Powered by:
+
+Ollama
+
+Streamlit
+
+LLaMA 2 by Meta
+
+
+---
+
+Let me know if you'd like me to save this into a downloadable `.md` file or help you structure the GitHub repo itself.
+
+
+
+
+
+
+
