@@ -89,18 +89,11 @@ ai-career-coach/
 
 🙋‍♀️ Author
 Built by Varshitha Yanamala
-
 Powered by:
-
 Ollama
-
 Streamlit
-
 LLaMA 2 by Meta
-
-
 ---
-
 Let me know if you'd like me to save this into a downloadable `.md` file or help you structure the GitHub repo itself.
 
 
